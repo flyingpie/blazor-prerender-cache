@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>Flyingpie.Utils.Postgres.UnitTest</AssemblyName>
+		<RootNamespace>Flyingpie.Utils.Postgres.UnitTest</RootNamespace>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+		<PackageReference Include="Moq" Version="4.15.2" />
+		<PackageReference Include="MSTest.TestAdapter" Version="2.1.2" />
+		<PackageReference Include="MSTest.TestFramework" Version="2.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Postgres\Postgres.csproj" />
+	</ItemGroup>
+</Project>

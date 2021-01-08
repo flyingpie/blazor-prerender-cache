@@ -1,0 +1,25 @@
+parameters:
+  - name: isPreRelease
+    type: boolean
+    default: true
+
+trigger:
+  branches:
+    include:
+    - "postgres/*"
+  paths:
+    include:
+    - Postgres/*
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Platform/BuildTemplates
+      ref: refs/heads/master
+
+extends:
+  template: NuGetPackage/v1/_build-and-push.yml@templates
+  parameters:
+    pathToSlnDir: 'Postgres'
+    isPreRelease: ${{ parameters.isPreRelease }}
