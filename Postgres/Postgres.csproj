@@ -11,10 +11,15 @@
 		<OutputPath>bin</OutputPath>
 		<TargetFrameworks>net5.0</TargetFrameworks>
 
+		<!-- NuGet Package -->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-
 		<Authors>Marco van den Oever</Authors>
-		<Description>Postgres utilities</Description>
+		<PackageId>Flyingpie.Utils.Postgres</PackageId>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>pie.png</PackageIcon>
+		<PackageProjectUrl>https://github.com/flyingpie/utils-postgres</PackageProjectUrl>
+		<PackageTags>postgres npgsql dapper migration migrations retry polly reliable</PackageTags>
+		<Description>npgsql + dapper, simple retrying and migrations</Description>
 		<PackageReleaseNotes>
 			1.0.0	Initial release
 		</PackageReleaseNotes>
@@ -25,5 +30,9 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
 		<PackageReference Include="Npgsql" Version="5.0.1.1" />
 		<PackageReference Include="Polly" Version="7.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\pie.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 </Project>
