@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Build", "00 - Build", "{BF8B0D75-A2E1-4A91-8581-6C218FE73FC0}"
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
-		build.ps1 = build.ps1
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postgres", "Postgres\Postgres.csproj", "{C2905A16-3FDE-4378-B242-0DEDCD2A0BB6}"

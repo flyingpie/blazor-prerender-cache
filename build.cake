@@ -14,7 +14,7 @@ var branch = gv.BranchName;
 if (branch.Contains("/")) branch = branch.Substring(branch.LastIndexOf('/') + 1);
 
 var version = XmlPeek(GetFiles("**/*.csproj").First(), "//Version");
-var versionPkg = !isPreRelease ? version : $"{version}-{branch}-{DateTime.Now.ToString("MMddHHmm")}";
+var versionPkg = !isPreRelease ? version : $"{version}-{branch}-{DateTime.Now:MMddHHmm}";
 
 Task("Clean").Does(() =>
 {
@@ -26,8 +26,6 @@ Task("Build").Does(() =>
 	MSBuild(sln, new MSBuildSettings
 	{
 		Configuration = configuration,
-		MaxCpuCount = 0, // As many as available
-		NodeReuse = false, // Required to prevent build task dll's from being locked
 		Restore = true,
 		ToolPath = GetFiles(VSWhereLatest() + "/**/MSBuild.exe").FirstOrDefault()
 	}
@@ -40,7 +38,7 @@ Task("Build").Does(() =>
 
 Task("Test").Does(() =>
 {
-	VSTest("./**/bin/**/*.UnitTest.dll", new VSTestSettings
+	VSTest($"./**/bin/{configuration}/net5.0/*.UnitTest.dll", new VSTestSettings
 	{
 		ToolPath = GetFiles(VSWhereLatest() + "/**/vstest.console.exe").FirstOrDefault()
 	});
