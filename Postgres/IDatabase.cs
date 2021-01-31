@@ -19,5 +19,7 @@ namespace Flyingpie.Utils.Postgres
 		Task<TResult> ExecuteScalarAsync<TResult>(string sql, object? param = null);
 
 		Task<IEnumerable<TResult>> QueryAsync<TResult>(string sql, object? param = null);
+
+		Task<TResult> WithConnectionAsync<TResult>(Func<IDbConnection, Task<TResult>> action);
 	}
 }

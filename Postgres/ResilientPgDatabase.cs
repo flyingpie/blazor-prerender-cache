@@ -112,5 +112,24 @@ namespace Flyingpie.Utils.Postgres
 				}
 			});
 		}
+
+		public Task<TResult> WithConnectionAsync<TResult>(Func<IDbConnection, Task<TResult>> action)
+		{
+			return _retryPolicy.ExecuteAsync(async () =>
+			{
+				try
+				{
+					await _sema.WaitAsync();
+
+					await _db.ConnectAsync();
+
+					return await _db.WithConnectionAsync<TResult>(action);
+				}
+				finally
+				{
+					_sema.Release();
+				}
+			});
+		}
 	}
 }

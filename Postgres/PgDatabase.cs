@@ -11,7 +11,6 @@ namespace Flyingpie.Utils.Postgres
 	public class PgDatabase : IDatabase
 	{
 		private readonly NpgsqlConnection _connection;
-		private readonly string _connectionString;
 		private readonly ILogger _log;
 
 		private bool _isDisposed;
@@ -25,7 +24,6 @@ namespace Flyingpie.Utils.Postgres
 		public PgDatabase(NpgsqlConnection connection, ILogger logger)
 		{
 			_connection = connection ?? throw new ArgumentNullException(nameof(connection));
-			_connectionString = connection.ConnectionString;
 			_log = logger ?? throw new ArgumentNullException(nameof(logger));
 		}
 
@@ -68,5 +66,8 @@ namespace Flyingpie.Utils.Postgres
 			_connection.Dispose();
 			_isDisposed = true;
 		}
+
+		public Task<TResult> WithConnectionAsync<TResult>(Func<IDbConnection, Task<TResult>> action)
+			=> action(_connection);
 	}
 }
