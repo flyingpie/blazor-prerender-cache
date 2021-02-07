@@ -64,7 +64,7 @@ namespace Flyingpie.Blazor.PrerenderCache
 		{
 			if (!_isLoaded)
 			{
-				Items = await _js.InvokeAsync<Dictionary<string, object>>("preloadCache.load");
+				Items = await _js.InvokeAsync<Dictionary<string, object>>("prerenderCache.load");
 				_isLoaded = true;
 
 				Console.WriteLine($"Loaded cache ({Items.Count} items).");

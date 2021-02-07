@@ -1,6 +1,8 @@
-﻿<script suppress-error="BL9992" type="text/javascript">
-	window.preloadCache = {
-		cache: @(new MarkupString(Cache.Serialize())),
-		load: () => window.preloadCache.cache
+﻿@inject IPrerenderCache cache
+
+<script suppress-error="BL9992" type="text/javascript">
+	window.prerenderCache = {
+		cache: @(new MarkupString(cache.Serialize())),
+		load: () => window.prerenderCache.cache
 	};
 </script>
