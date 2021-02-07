@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<AssemblyName>Flyingpie.Utils.Postgres.UnitTest</AssemblyName>
-		<RootNamespace>Flyingpie.Utils.Postgres.UnitTest</RootNamespace>
+		<AssemblyName>Blazor.PrerenderCache.UnitTest</AssemblyName>
+		<RootNamespace>Blazor.PrerenderCache.UnitTest</RootNamespace>
 		<TargetFrameworks>net5.0</TargetFrameworks>
 	</PropertyGroup>
 
@@ -13,6 +13,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Postgres\Postgres.csproj" />
+		<ProjectReference Include="..\Blazor.PrerenderCache\Blazor.PrerenderCache.csproj" />
 	</ItemGroup>
 </Project>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Build", "00 - Build", "{BF8B0D75-A2E1-4A91-8581-6C218FE73FC0}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.PrerenderCache", "Blazor.PrerenderCache\Blazor.PrerenderCache.csproj", "{4B4D391E-8F19-4707-B90D-8A24F5069633}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.PrerenderCache.UnitTest", "Blazor.PrerenderCache.UnitTest\Blazor.PrerenderCache.UnitTest.csproj", "{D6E9AE1F-534B-42BF-A4EC-C7ED8B936534}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B4D391E-8F19-4707-B90D-8A24F5069633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4D391E-8F19-4707-B90D-8A24F5069633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4D391E-8F19-4707-B90D-8A24F5069633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4D391E-8F19-4707-B90D-8A24F5069633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E9AE1F-534B-42BF-A4EC-C7ED8B936534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E9AE1F-534B-42BF-A4EC-C7ED8B936534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E9AE1F-534B-42BF-A4EC-C7ED8B936534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E9AE1F-534B-42BF-A4EC-C7ED8B936534}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {728FD3B3-6BAC-49FE-9D6B-B0AFEBE5C7B9}
+	EndGlobalSection
+EndGlobal

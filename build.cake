@@ -5,8 +5,8 @@ var configuration = Argument("configuration", "Release");
 var isPreRelease = Argument("isPreRelease", true);
 var output = Argument("output", "artifacts");
 
-var sln = "Postgres.sln";
-var nupkgs = "Postgres/**/*.nupkg";
+var sln = "Blazor.PrerenderCache.sln";
+var nupkgs = "Blazor.PrerenderCache/**/*.nupkg";
 
 // Determine package version
 var gv = GitVersion();
