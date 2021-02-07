@@ -2,8 +2,8 @@
 	<PropertyGroup>
 		<Version>1.0.0</Version>
 
-		<AssemblyName>Blazor.PrerenderCache</AssemblyName>
-		<RootNamespace>Blazor.PrerenderCache</RootNamespace>
+		<AssemblyName>Flyingpie.Blazor.PrerenderCache</AssemblyName>
+		<RootNamespace>Flyingpie.Blazor.PrerenderCache</RootNamespace>
 
 		<Nullable>enable</Nullable>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -13,7 +13,7 @@
 		<!-- NuGet Package -->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Marco van den Oever</Authors>
-		<PackageId>Blazor.PrerenderCache</PackageId>
+		<PackageId>Flyingpie.Blazor.PrerenderCache</PackageId>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>pie.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/flyingpie/blazor-prerender-cache</PackageProjectUrl>

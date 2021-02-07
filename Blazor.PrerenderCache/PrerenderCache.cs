@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Blazor.PrerenderCache
+namespace Flyingpie.Blazor.PrerenderCache
 {
 	public interface IPrerenderCache
 	{

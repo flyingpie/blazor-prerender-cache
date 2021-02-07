@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Blazor.PrerenderCache
+namespace Flyingpie.Blazor.PrerenderCache
 {
 	public partial class PrerenderCacheStore
 	{
