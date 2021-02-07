@@ -58,7 +58,7 @@ This is to prevent the component from rendering before all to-be-cached-data is 
 
 ```csharp
 [Inject]
-public IPrerenderCache { get; set; }
+public IPrerenderCache Cache { get; set; }
 
 protected override async Task OnInitializedAsync()
 {
@@ -69,6 +69,8 @@ protected override async Task OnInitializedAsync()
   VM = await Cache.GetOrAdd(nameof(Articles), () => StashApiClient.GetPostsAsync());
 }
 ```
+
+The first argument of the GetOrAdd-method is the cache key, which must be unique within the page.
 
 ## Under The Hood
 
