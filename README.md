@@ -78,9 +78,9 @@ You can see the result of the cache by looking at the page source:
 
 ```html
 <script type="text/javascript">
-	window.prerenderCache = {
-		cache: {"Articles":{"Limit":25,"Offset":0,"Count":4,"Posts":[{"Id":"37af5802-7ea4-4def-b090-5bd4ebf4dabc", ... }]}},
-		load: () => window.prerenderCache.cache
-	};
+  window.prerenderCache = {
+    cache: {"Articles":{"Limit":25,"Offset":0,"Count":4,"Posts":[{"Id":"37af5802-7ea4-4def-b090-5bd4ebf4dabc", ... }]}},
+    load: () => window.prerenderCache.cache
+  };
 </script>
 ```
